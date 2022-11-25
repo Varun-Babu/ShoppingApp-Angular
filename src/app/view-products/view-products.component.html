@@ -1,18 +1,22 @@
 <div class="container">
     <div class="row">
         <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-            <div class="row g-3">
+            <div class="row g-3 mt-4">
                 <div class="col col-12 col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 " *ngFor="let i of data">
-                   
-                    <div class="card">
-                        <img src="{{i.image}}" class="card-img-top" width="200" height="200" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">{{i.title}}</h5>
+                    <div class="card" style="width: 18rem;">
+                        <img src="{{i.image}}" class="card-img-top" height=300px alt="...">
+                        <div style="height: 250p; overflow-y: hidden;" class="card-body">
+                          <h5 class="card-title">Product:{{i.title}}</h5>
                           <p class="card-text">{{i.description}}</p>
-                          <p class="card-text">{{i.category}}</p>
-                          <p class="card-text">{{i.price}}</p>
-                          <p class="card-text">{{i.rating}}</p>
-                          <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item">Category:{{i.category}}</li>
+                          <li class="list-group-item">price:{{i.price}}</li>
+                          <li class="list-group-item">Rated By{{i.rating.count}}</li>
+                        </ul>
+                        <div class="card-body">
+                          <a href="#" class="card-link">Card link</a>
+                          <a href="#" class="card-link">Another link</a>
                         </div>
                       </div>
                 </div>
